@@ -81,7 +81,7 @@ const RamadanCalendar = () => {
                 <div className="text-center mb-3">
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <span className="text-[11px] text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">
-                            শমসেরনগর, মৌলভীবাজার
+                            কমলগঞ্জ, মৌলভীবাজার
                         </span>
                         <span className="text-[10px] text-gray-400">•</span>
                         <div className="flex items-center gap-1 text-[11px] text-gray-600 dark:text-gray-300">
