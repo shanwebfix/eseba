@@ -72,24 +72,24 @@ const categories = [
 
 const SimpleCategory = () => {
   return (
-    <div className="py-20 px-6">
+    <div className="py-20 px-0">
       <div className="max-w-6xl mx-auto">
         {/* Simple Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Digital Marketplace</h2>
-            <p className="text-slate-500 text-sm mt-1">Explore our wide range of premium digital assets.</p>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Assets Library</h2>
+            <p className="text-slate-500 text-sm mt-1">Select a category to explore our digital assets.</p>
           </div>
           <div className="h-px flex-1 bg-slate-100 dark:bg-slate-800 mx-8 hidden md:block"></div>
         </div>
 
         {/* Grid Layout - Responsive columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {categories.map((cat) => (
             <a 
               href={cat.link} 
               key={cat.id}
-              className="group p-8 border border-slate-100 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
+              className="group p-4 border border-slate-100 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
             >
               <div>
                 <div className="flex justify-between items-start">
@@ -102,7 +102,7 @@ const SimpleCategory = () => {
                   />
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-4">
                   <h3 className="text-md font-bold text-slate-900 dark:text-white mb-2">
                     {cat.title}
                   </h3>
