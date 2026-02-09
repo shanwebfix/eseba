@@ -4,8 +4,8 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
-// তোমার অ্যাপসের পেজগুলো এখানে ইম্পোর্ট করো
 import Sn from "./pages/Apps/sn"; 
+import Mb from "./pages/Apps/mb";
 
 
 export default function App() {
@@ -24,7 +24,8 @@ export default function App() {
               
               {/* অ্যাপসের আলাদা আলাদা পেজ রুট */}
               <Route path="/Apps/sn" element={<Sn />} />
-              {/* <Route path="/apps/app-two" element={<AppTwo />} /> */}
+              <Route path="/Apps/mb" element={<Mb />} />
+             
             </Routes>
           </main>
         </div>

@@ -10,10 +10,7 @@ const Home = () => {
 
       {/* ২. অ্যাপ লিস্ট সেকশন */}
       <section>
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Our Digital Services</h2>
-          <p className="text-gray-500 dark:text-gray-400">Select an asset to see details</p>
-        </div>
+
         <AppList />
       </section>
     </div>
