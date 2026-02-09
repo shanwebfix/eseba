@@ -1,9 +1,9 @@
 import React from 'react';
-import { Search, Layout, Smartphone, Palette, Code, Sparkles } from 'lucide-react';
+import { Search, Layout, Smartphone, Palette, Code, Sparkles, Laptop, StarHalf } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#fafaff] dark:bg-[#05070a] pt-16 pb-20 px-6 rounded-[3rem] border border-purple-100 dark:border-purple-900/20 shadow-[0_20px_50px_rgba(124,58,237,0.1)] overflow-hidden transition-all duration-500">
+    <section className="relative bg-[#fafaff] dark:bg-[#05070a] pt-16 pb-20 px-6 rounded-[1rem] border border-purple-100 dark:border-purple-900/20 shadow-[0_20px_50px_rgba(124,58,237,0.1)] overflow-hidden transition-all duration-500">
       
       {/* Background Blurs */}
       <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-purple-200/40 dark:bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -46,7 +46,9 @@ const Hero = () => {
         {/* --- Category Icons with Links --- */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-14">
           {[
-            { icon: Smartphone, label: 'Mobile Apps', color: 'hover:bg-purple-600', text: 'group-hover:text-purple-600', link: '/mobile-apps' },
+            { icon: Smartphone, label: 'Mobile Apps', color: 'hover:bg-purple-600', text: 'group-hover:text-purple-600', link: '/cetegories/mobileapp' },
+            { icon: Laptop, label: 'PC Apps', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/web-themes' },
+            { icon: StarHalf, label: 'AI Tools', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/cetegories/ai-tools' },
             { icon: Layout, label: 'Web Themes', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/web-themes' },
             { icon: Palette, label: 'UI Kits', color: 'hover:bg-fuchsia-600', text: 'group-hover:text-fuchsia-600', link: '/ui-kits' },
             { icon: Code, label: 'Components', color: 'hover:bg-violet-600', text: 'group-hover:text-violet-600', link: '/components' }

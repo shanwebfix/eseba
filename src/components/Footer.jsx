@@ -80,21 +80,21 @@ const Footer = () => {
               <div className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-800">
                 <MapPin size={18} className="text-[#7C3AED]" />
               </div>
-              <span className="leading-relaxed pt-1.5">Silicon Tower, Level 4,<br/>Dhaka, Bangladesh</span>
+              <span className="leading-relaxed pt-1.5">Moulvibazar<br/>Syhet, Bangladesh</span>
             </div>
             
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-800">
                 <Phone size={18} className="text-[#7C3AED]" />
               </div>
-              <span>+880 1234 567 890</span>
+              <span>+880 1234 567 ***</span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-slate-900 border border-slate-800">
                 <Mail size={18} className="text-[#7C3AED]" />
               </div>
-              <span>hello@eseba.com</span>
+              <span>hello@eseba.vercel.app</span>
             </div>
           </div>
         </div>
