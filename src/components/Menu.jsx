@@ -38,28 +38,28 @@ const categories = [
     title: "Themes",
     desc: "Modern and responsive layouts for various platforms.",
     icon: <Layout strokeWidth={1.5} />,
-    link: "/categories/themes"
+    link: "/cetegories/themes"
   },
   {
     id: 5,
     title: "Plugins",
     desc: "Powerful extensions to enhance your workflow.",
     icon: <PlugZap strokeWidth={1.5} />,
-    link: "/categories/plugins"
+    link: "/cetegories/plugins"
   },
   {
     id: 6,
     title: "Web Scripts",
     desc: "Robust backend and frontend scripts for developers.",
     icon: <Code2 strokeWidth={1.5} />,
-    link: "/categories/web-scripts"
+    link: "/cetegories/web-scripts"
   },
   {
     id: 7,
     title: "Graphics",
     desc: "High-quality design assets and visual resources.",
     icon: <Palette strokeWidth={1.5} />,
-    link: "/categories/graphics"
+    link: "/cetegories/graphics"
   },
   {
     id: 8,
