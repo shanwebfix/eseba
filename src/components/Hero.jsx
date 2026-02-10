@@ -27,7 +27,7 @@ const Hero = () => {
 </p>
 
         {/* --- Compact Search Bar --- */}
-        <div className="max-w-lg mx-auto mb-16 px-2">
+        <div className="max-w-lg mx-auto mb-2 px-2">
           <div className="relative flex items-center bg-white dark:bg-slate-900 border border-purple-100 dark:border-white/10 rounded-2xl p-1.5 shadow-lg transition-all focus-within:ring-2 focus-within:ring-purple-500/20">
             <div className="flex items-center flex-1 px-3">
               <Search size={18} className="text-purple-500" />
@@ -43,34 +43,11 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* --- Category Icons with Links --- */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-14">
-          {[
-            { icon: Smartphone, label: 'Mobile Apps', color: 'hover:bg-purple-600', text: 'group-hover:text-purple-600', link: '/Apps/mobile-apps' },
-            { icon: Laptop, label: 'PC Apps', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/Apps/pc-apps' },
-            { icon: StarHalf, label: 'AI Tools', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/cetegories/ai-tools' },
-            { icon: Layout, label: 'Web Themes', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/web-themes' },
-            { icon: Palette, label: 'UI Kits', color: 'hover:bg-fuchsia-600', text: 'group-hover:text-fuchsia-600', link: '/ui-kits' },
-            { icon: Code, label: 'Components', color: 'hover:bg-violet-600', text: 'group-hover:text-violet-600', link: '/components' }
-          ].map((item, idx) => (
-            <a 
-              key={idx} 
-              href={item.link} 
-              className="flex flex-col items-center group cursor-pointer"
-            >
-              <div className={`w-14 h-14 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700 transition-all duration-300 group-hover:scale-110 group-hover:text-white group-hover:shadow-xl ${item.color} group-hover:border-transparent`}>
-                <item.icon size={26} strokeWidth={1.5} />
-              </div>
-              <span className={`mt-3 text-sm font-semibold text-slate-500 dark:text-slate-400 transition-colors ${item.text}`}>
-                {item.label}
-              </span>
-            </a>
-          ))}
-        </div>
+        
       </div>
 
       {/* Subtle Bottom Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"></div>
+  
     </section>
   );
 };

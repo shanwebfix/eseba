@@ -25,9 +25,9 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'About', href: '/Nav/about' },
+    { name: 'Help', href: '/Nav/help' },
+    { name: 'Contact', href: '/Nav/contact' }
   ];
 
   return (
@@ -75,9 +75,9 @@ const Header = () => {
               className="p-1 text-slate-800 dark:text-white transition-all active:scale-90"
             >
               {isOpen ? (
-                <X size={28} className="transition-all" />
+                <X size={22} className="transition-all" />
               ) : (
-                <TextAlignEnd size={28} className="transition-all" />
+                <TextAlignEnd size={22} className="transition-all" />
               )}
             </button>
           </div>
@@ -99,7 +99,7 @@ const Header = () => {
                 <a 
                   key={link.name}
                   href={link.href} 
-                  className="flex items-center justify-between py-4 text-2xl font-bold text-slate-800 dark:text-white border-b border-slate-50 dark:border-slate-900/50 hover:text-[#7C3AED] dark:hover:text-purple-400 transition-colors"
+                  className="flex items-center justify-between py-4 text-1xl font-bold text-slate-800 dark:text-white border-b border-slate-50 dark:border-slate-900/50 hover:text-[#7C3AED] dark:hover:text-purple-400 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
