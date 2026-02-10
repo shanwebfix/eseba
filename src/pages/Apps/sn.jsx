@@ -15,10 +15,10 @@ const AppDetails = () => {
     version: "1.0.2",
     updated: "৯ ফেব্রুয়ারি, ২০২৬",
     screenshots: [
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
-      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600",
-      "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=600",
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
+      "/image/sn.webp",
+      "/image/sn2.webp",
+      "/image/sn3.webp",
+      "/image/sn4.webp",
     ],
     features: [
       "জরুরি রক্তদাতার তালিকা ও যোগাযোগ",
