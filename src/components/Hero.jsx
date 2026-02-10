@@ -46,8 +46,8 @@ const Hero = () => {
         {/* --- Category Icons with Links --- */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-14">
           {[
-            { icon: Smartphone, label: 'Mobile Apps', color: 'hover:bg-purple-600', text: 'group-hover:text-purple-600', link: '/cetegories/mobileapp' },
-            { icon: Laptop, label: 'PC Apps', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/web-themes' },
+            { icon: Smartphone, label: 'Mobile Apps', color: 'hover:bg-purple-600', text: 'group-hover:text-purple-600', link: '/Apps/mobile-apps' },
+            { icon: Laptop, label: 'PC Apps', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/Apps/pc-apps' },
             { icon: StarHalf, label: 'AI Tools', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/cetegories/ai-tools' },
             { icon: Layout, label: 'Web Themes', color: 'hover:bg-indigo-600', text: 'group-hover:text-indigo-600', link: '/web-themes' },
             { icon: Palette, label: 'UI Kits', color: 'hover:bg-fuchsia-600', text: 'group-hover:text-fuchsia-600', link: '/ui-kits' },

@@ -102,9 +102,12 @@ const AppDetails = () => {
           {/* Section 2: Content & Action */}
           <div className="lg:col-span-7 space-y-10">
             <header className="flex items-start gap-6">
-              <div className="w-24 h-24 shrink-0 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl flex items-center justify-center text-white text-4xl font-bold shadow-2xl shadow-indigo-500/40">
-                S
-              </div>
+<img
+  src="/image/sn-logo.webp"
+  alt="SN Logo"
+  className="w-24 h-24 shrink-0 object-cover rounded-3xl shadow-2xl shadow-indigo-500/40"
+/>
+
               <div>
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">{appData.name}</h1>
                 <p className="mt-2 text-indigo-600 dark:text-indigo-400 font-semibold text-lg">{appData.tagline}</p>
