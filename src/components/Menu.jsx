@@ -17,14 +17,14 @@ const categories = [
     title: "Mobile Apps",
     desc: "Premium applications for Android and iOS devices.",
     icon: <Smartphone strokeWidth={1.5} />,
-    link: "/cetegories/mobile-apps"
+    link: "/Apps/mobile-apps"
   },
   {
     id: 2,
     title: "PC Apps",
     desc: "Essential software and tools for Windows and macOS.",
     icon: <Monitor strokeWidth={1.5} />,
-    link: "/cetegories/pc-apps"
+    link: "/Apps/pc-apps"
   },
   {
     id: 3,

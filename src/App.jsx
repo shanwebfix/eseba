@@ -17,7 +17,15 @@ import PCAppDetails from "./pages/Apps/pc-apps-details";
 import Mobileapps from "./pages/Apps/mobile-apps";
 import MobileAppDetails from "./pages/Apps/mobile-apps-details";
 
-
+{/* Nav Route  */}
+import About from "./pages/Nav/about";
+import Privacy from "./pages/Nav/privacy";
+import Terms from "./pages/Nav/terms";
+import Contact from "./pages/Nav/contact";
+import Faq from "./pages/Nav/faq";
+import Service from "./pages/Nav/service";
+import Help from "./pages/Nav/help";
+import Career from "./pages/Nav/career";
 
 
 export default function App() {
@@ -47,6 +55,17 @@ export default function App() {
               {/* পিসি অ্যাপস সেকশন (আলাদা পাথ) */}
               <Route path="/Apps/pc-apps" element={<PcAppList />} />
               <Route path="/Apps/pc-details/:id" element={<PCAppDetails />} />
+
+
+              {/* Nav Link) */}
+              <Route path="/Nav/about" element={<About />} />
+              <Route path="/Nav/privacy" element={<Privacy />} />
+              <Route path="/Nav/terms" element={<Terms />} />
+              <Route path="/Nav/contact" element={<Contact />} />
+              <Route path="/Nav/faq" element={<Faq />} />
+              <Route path="/Nav/service" element={<Service />} />
+              <Route path="/Nav/help" element={<Help />} />
+              <Route path="/Nav/career" element={<Career />} />
               
 
              
