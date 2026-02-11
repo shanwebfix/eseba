@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
 
 const TodayRamadan = () => {
     const [todayData, setTodayData] = useState(null);
     const [currentTime, setCurrentTime] = useState('');
-    const [countdown, setCountdown] = useState('রামাদান সন্নিকটে...');
 
     const RAMADAN_DATA = [
         { day: 1, date: '১৮ ফেব্রুয়ারি', fullDate: '2026-02-18', seheri: '05:15', iftar: '18:05' },
@@ -44,15 +42,6 @@ const TodayRamadan = () => {
         return num.toString().replace(/\d/g, digit => bengaliDigits[digit]);
     };
 
-    const formatTo12Hr = (time24) => {
-        if (!time24) return '--:--';
-        let [h, m] = time24.split(':');
-        let hours = parseInt(h);
-        let suffix = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12 || 12;
-        return `${toBengaliNumber(hours)}:${toBengaliNumber(m)} ${suffix}`;
-    };
-
     useEffect(() => {
         const updateTimer = () => {
             const now = new Date();
@@ -60,47 +49,9 @@ const TodayRamadan = () => {
 
             const todayStr = now.toISOString().split('T')[0];
             const dataIndex = RAMADAN_DATA.findIndex(item => item.fullDate === todayStr);
-            const data = dataIndex !== -1 ? RAMADAN_DATA[dataIndex] : null;
+            const data = dataIndex !== -1 ? RAMADAN_DATA[dataIndex] : RAMADAN_DATA[0];
             
-            setTodayData(data || RAMADAN_DATA[0]);
-
-            if (data) {
-                const [sH, sM] = data.seheri.split(':').map(Number);
-                const [iH, iM] = data.iftar.split(':').map(Number);
-
-                const seheriTime = new Date(now).setHours(sH, sM, 0);
-                const iftarTime = new Date(now).setHours(iH, iM, 0);
-
-                let targetTime, label;
-
-                if (now < seheriTime) {
-                    targetTime = seheriTime;
-                    label = "সেহরী শেষ হতে বাকি: ";
-                } else if (now < iftarTime) {
-                    targetTime = iftarTime;
-                    label = "ইফতার হতে বাকি: ";
-                } else {
-                    const nextDay = RAMADAN_DATA[dataIndex + 1];
-                    if (nextDay) {
-                        const [nsH, nsM] = nextDay.seheri.split(':').map(Number);
-                        const tomorrowSeheri = new Date(now);
-                        tomorrowSeheri.setDate(tomorrowSeheri.getDate() + 1);
-                        tomorrowSeheri.setHours(nsH, nsM, 0);
-                        targetTime = tomorrowSeheri;
-                        label = "আগামী সেহরী হতে বাকি: ";
-                    } else {
-                        setCountdown("রমজান সম্পন্ন হয়েছে");
-                        return;
-                    }
-                }
-
-                const diff = targetTime - now;
-                const h = Math.floor(diff / 3600000);
-                const m = Math.floor((diff % 3600000) / 60000);
-                const s = Math.floor((diff % 60000) / 1000);
-
-                setCountdown(`${label} ${toBengaliNumber(h)} ঘণ্টা ${toBengaliNumber(m)} মিনিট ${toBengaliNumber(s)} সেকেন্ড`);
-            }
+            setTodayData(data);
         };
 
         const interval = setInterval(updateTimer, 1000);
@@ -111,13 +62,10 @@ const TodayRamadan = () => {
     if (!todayData) return null;
 
     return (
-        <div className="w-full bg-gradient-to-br from-white to-green-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-3 mb-4 border border-purple-100 dark:border-gray-700 shadow-sm">
+        <div className="w-full bg-gradient-to-br from-white to-green-50 dark:from-[#05070a] dark:to-gray-950 rounded-xl p-3 mb-4 border border-purple-100 dark:border-gray-700 shadow-sm">
             <div className="text-center mb-3">
                 <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-[11px] text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-full">
-                        কমলগঞ্জ, মৌলভীবাজার
-                    </span>
-                    <span className="text-[11px] text-gray-600 dark:text-gray-300">
                         {currentTime}
                     </span>
                 </div>
@@ -128,46 +76,6 @@ const TodayRamadan = () => {
                 <p className="text-[11px] text-gray-600 dark:text-gray-400 mt-0.5">
                     {todayData.date}, ২০২৬
                 </p>
-
-                <p className="text-[10px] font-medium text-purple-700 dark:text-purple-400 mt-1 bg-green-50 dark:bg-green-900/20 inline-block px-3 py-1 rounded-full border border-green-100 dark:border-purple-800">
-                    {countdown}
-                </p>
-            </div>
-
-            <div className="flex items-center justify-between gap-3 mb-4">
-                <div className="flex-1 bg-white dark:bg-gray-800 p-3 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm">
-                    <div className="flex items-center">
-                        <div className="mr-3">
-                            <Moon className="w-4 h-4 text-blue-600" />
-                        </div>
-                        <div>
-                            <p className="text-[10px] text-gray-500 mb-0.5">সেহরী শেষ</p>
-                            <p className="text-lg font-bold dark:text-white">
-                                {formatTo12Hr(todayData.seheri)}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                    <div className="w-0.5 h-6 bg-gray-200 dark:bg-gray-700"></div>
-                    <div className="text-[10px] text-gray-400 py-1 font-medium">এবং</div>
-                    <div className="w-0.5 h-6 bg-gray-200 dark:bg-gray-700"></div>
-                </div>
-
-                <div className="flex-1 bg-white dark:bg-gray-800 p-3 rounded-lg border border-orange-100 dark:border-gray-700 shadow-sm">
-                    <div className="flex items-center">
-                        <div className="mr-3">
-                            <Sun className="w-4 h-4 text-orange-600" />
-                        </div>
-                        <div>
-                            <p className="text-[10px] text-gray-500 mb-0.5">ইফতার শুরু</p>
-                            <p className="text-lg font-bold dark:text-white">
-                                {formatTo12Hr(todayData.iftar)}
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div className="mb-3">
@@ -185,7 +93,7 @@ const TodayRamadan = () => {
 
             <div className="text-center pt-1">
                 <a 
-                    href="./cetegories/RamadanCalander"
+                    href="./cetegories/Ramadan64"
                     className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white text-xs font-medium rounded-lg transition-colors shadow-sm active:scale-95"
                 >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

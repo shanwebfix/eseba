@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 
 import AI from "./pages/cetegories/ai-tools";
 import Ramadan from "./pages/cetegories/RamadanCalander";
+import Ramadan64 from "./pages/cetegories/Ramadan-64";
 
 
 {/* Apps Route  */}
@@ -46,6 +47,7 @@ export default function App() {
 
               <Route path="/cetegories/ai-tools" element={<AI />} />
               <Route path="/cetegories/RamadanCalander" element={<Ramadan />} />
+              <Route path="/cetegories/Ramadan64" element={<Ramadan64 />} />
 
 
               {/* মোবাইল অ্যাপস সেকশন (আলাদা পাথ) */}

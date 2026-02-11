@@ -9,7 +9,7 @@ const initialAppsData = [
     category: "Mobile App", 
     price: "Free", 
     rating: 4.9, 
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop", 
+    image: "/image/mb4.webp", 
     downloads: 1200, 
   },
   { 
