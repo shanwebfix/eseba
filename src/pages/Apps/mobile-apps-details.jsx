@@ -12,7 +12,7 @@ const mobileAppsData = {
     version: "1.0.2",
     updated: "৯ ফেব্রুয়ারি, ২০২৬",
     logo: "/image/sn-logo.webp",
-    downloadUrl: "/app/Shamshernagar.apk",
+    downloadUrl: "/app/myshamshernagar.apk",
     screenshots: ["/image/sn.webp", "/image/sn2.webp", "/image/sn3.webp"],
     features: ["জরুরি রক্তদাতার তালিকা", "অভিজ্ঞ ডাক্তারদের সিরিয়াল", "ফায়ার সার্ভিস নম্বর", "বিদ্যুৎ অভিযোগ সেবা"]
   },

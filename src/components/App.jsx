@@ -62,7 +62,7 @@ const AppList = () => {
     : apps.filter(app => app.category === filter);
 
   return (
-    <div className="container mx-auto pb-20 px-4">
+    <div className="container mx-auto pb-20 px-0">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -90,7 +90,7 @@ const AppList = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredApps.map((app) => (
-          <div key={app.id} className="group bg-white dark:bg-[#0a0f1c] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-purple-900/20">
+          <div key={app.id} className="group bg-white dark:bg-[#0a0f1c] rounded-lg overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-purple-900/20">
             <div className="relative h-56 overflow-hidden">
               <img src={app.image} alt={app.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>

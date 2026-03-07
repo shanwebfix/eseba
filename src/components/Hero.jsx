@@ -3,7 +3,7 @@ import { Search, Layout, Smartphone, Palette, Code, Sparkles, Laptop, StarHalf }
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#fafaff] dark:bg-[#05070a] pt-16 pb-20 px-6 rounded-[1rem] border border-purple-100 dark:border-purple-900/20 shadow-[0_20px_50px_rgba(124,58,237,0.1)] overflow-hidden transition-all duration-500">
+    <section className="relative bg-[#fafaff] dark:bg-[#05070a] pt-16 pb-20 px-6 rounded-lg border border-purple-100 dark:border-purple-900/20 shadow-[0_20px_50px_rgba(124,58,237,0.1)] overflow-hidden transition-all duration-500">
       
       {/* Background Blurs */}
       <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-purple-200/40 dark:bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>

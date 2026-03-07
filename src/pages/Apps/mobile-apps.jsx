@@ -59,7 +59,7 @@ const AppList = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {apps.map((app) => (
-          <div key={app.id} className="group bg-white dark:bg-[#0a0f1c] rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-purple-900/20">
+          <div key={app.id} className="group bg-white dark:bg-[#0a0f1c] rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-purple-900/20">
             <div className="relative h-64 overflow-hidden">
               <img src={app.image} alt={app.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute top-6 right-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-1.5 rounded-2xl text-xs font-black text-[#7C3AED]">

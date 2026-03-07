@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
-// Added 'X' icon for the open state
-import { Sun, Moon, ArrowRight, Github, Twitter, Linkedin, TextAlignEnd, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom"; // এই ২টা শুধু লাগবে
+// Added 'X' and 'ChevronLeft' icons
+import { Sun, Moon, ArrowRight, Github, Twitter, Linkedin, TextAlignEnd, X, ChevronLeft } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+  const location = useLocation(); // বর্তমান পেজ চেক
+  const navigate = useNavigate(); // ব্যাক করার জন্য
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -35,11 +40,21 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex justify-between h-20 items-center">
           
-          {/* Logo */}
+          {/* Logo or Back Button */}
           <div className="flex-shrink-0 relative z-[110]">
-            <a href="/" className="block">
-              <img src="/logo.svg" alt="eSeba" className="h-5 w-auto transition-transform hover:scale-105" />
-            </a>
+            {isHomePage ? (
+              <a href="/" className="block">
+                <img src="/logo.svg" alt="eSeba" className="h-5 w-auto transition-transform hover:scale-105" />
+              </a>
+            ) : (
+              <button 
+                onClick={() => navigate(-1)} 
+                className="flex items-center text-slate-800 dark:text-white transition-all active:scale-90"
+              >
+                <ChevronLeft size={24} strokeWidth={2.5} />
+                <span className="font-bold text-sm ml-1">Back</span>
+              </button>
+            )}
           </div>
           
           {/* PC Menu */}
