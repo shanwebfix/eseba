@@ -8,9 +8,9 @@ const mobileAppsData = {
     tagline: "Your Digital Gateway to Shamshernagar",
     description: "শমসেরনগর ই-সেবা অ্যাপটি তৈরি করা হয়েছে স্থানীয় জনগণের দুর্ভোগ কমাতে। এখানে আপনি ডাক্তার, রক্তদাতা, ফায়ার সার্ভিস এবং বিদ্যুৎ অফিসের সকল তথ্য এক জায়গায় পাবেন।",
     rating: 4.9,
-    size: "6.1 MB",
+    size: "17.06 MB",
     version: "1.0.2",
-    updated: "৯ ফেব্রুয়ারি, ২০২৬",
+    updated: "১০ মার্চ, ২০২৬",
     logo: "/image/sn-logo.webp",
     downloadUrl: "/app/myshamshernagar.apk",
     screenshots: ["/image/sn.webp", "/image/sn2.webp", "/image/sn3.webp"],
@@ -97,9 +97,7 @@ const MobileAppDetails = () => {
 
       {/* --- Main UI Content --- */}
       <div className="max-w-6xl mx-auto p-6 md:p-12">
-        <button onClick={() => navigate(-1)} className="flex items-center text-slate-500 mb-10 hover:text-indigo-600 font-medium transition-colors">
-          <ArrowLeft size={18} className="mr-2" /> Back to Apps List
-        </button>
+        <h1 className="text-2xl font-black text-slate-900 dark:text-white leading-tight p-2 mb-2">{app.name}</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Slider Section */}
